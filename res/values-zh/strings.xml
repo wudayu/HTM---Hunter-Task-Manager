@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">猎鲨任务管理器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">设置</string>
+    <string name="author">作者：吴大宇 / David Wu</string>
+    <string name="email">联系我: wudayu@gmail.com</string>
+    <string name="version_hint">Build Version</string>
+    <string name="version">v0.2.15 Beta</string>
+    <string name="str_exit_app_dialog_warning">注意</string>
+    <string name="str_exit_app_dialog_check">确认</string>
+    <string name="str_exit_app_toast_message">再按一次退出</string>
+    <string name="str_exit_app_dialog_message">确认您要离开吗？</string>
+    <string name="str_btn_positive">确认</string>
+    <string name="str_btn_negtive">取消</string>
+    <string name="preferences_exception_list_app_sysapp">exception_list_app_sysapp</string>
+    <string name="preferences_exception_list_service">exception_list_service</string>
+
+    <!-- Strings From MainActivity -->
+    <string name="title_activity_main">猎鲨任务管理器</string>
+    <string name="str_tab_apps_activity_main">应用程序</string>
+    <string name="str_tab_sysapps_activity_main">系统应用</string>
+    <string name="str_tab_services_activity_main">服务</string>
+    <string name="str_tab_performance_activity_main">性能</string>
+    <string name="str_tab_networking_activity_main">网络</string>
+    <string name="menu_preferences">设置</string>
+    <string name="menu_edit_exception_list">编辑例外列表</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_exit">退出</string>
+
+    <!-- Strings From PreferencesActivity -->
+    <string name="title_activity_preferences">设置</string>
+    <string name="str_category_general_activity_preferences">常规</string>
+    <string name="str_category_about_activity_preferences">关于</string>
+    <string name="str_display_htm_itself_activity_preferences">显示本软件</string>
+    <string name="str_summary_display_htm_itself_activity_preferences">在列表中显示猎鲨任务管理器</string>
+
+    <!-- Strings From AppsActivity -->
+    <string name="title_activity_apps">AppsActivity</string>
+    <string name="txt_appsnames_activity_apps">应用程序名</string>
+    <string name="txt_appsmems_activity_apps">内存</string>
+    <string name="btn_refresh_activity_apps">刷新</string>
+    <string name="btn_kill_activity_apps">杀死</string>
+    <string name="btn_kill_all_activity_apps">全部杀死</string>
+    <string name="iv_app_lv_apps_activity_apps">ImageView of each app</string>
+    <string name="str_apps_have_killed_activity_apps">已杀死</string>
+    <string name="str_nothing_has_checked_activity_apps">未选中任何项</string>
+    <string name="str_title_refresh_apps_list_activity_apps">载入中</string>
+    <string name="str_content_refresh_apps_list_activity_apps">载入当前应用程序列表</string>
+    <string name="context_item_switch_to_app_activity_apps">切换到此应用 (打开此应用)</string>
+    <string name="context_item_kill_task_activity_apps">杀死此任务</string>
+    <string name="context_item_storage_detail_activity_apps">存储信息</string>
+    <string name="context_item_forcestop_uninstall_activity_apps">强制停止 / 卸载</string>
+    <string name="context_item_add_to_exception_list_activity_apps">添加到例外列表</string>
+    <string name="txt_hint_activity_apps"> 提示: 如果“杀死”应用使用无效，你可以长按某项，选择强制停止。</string>
+
+    <!-- Strings From SysappsActivity -->
+    <string name="title_activity_sysapps">SysappsActivity</string>
+    <string name="txt_sysappsnames_activity_sysapps">系统应用名</string>
+    <string name="txt_sysappsmems_activity_sysapps">内存</string>
+    <string name="btn_refresh_activity_sysapps">刷新</string>
+    <string name="btn_kill_activity_sysapps">杀死</string>
+    <string name="btn_kill_all_activity_sysapps">全部杀死</string>
+	<string name="iv_sysapp_lv_sysapps_activity_sysapps">ImageView of each system app</string>
+    <string name="str_sysapps_have_killed_activity_sysapps">已杀死</string>
+    <string name="str_nothing_has_checked_activity_sysapps">未选中任何项</string>
+    <string name="str_title_refresh_sysapps_list_activity_sysapps">载入中</string>
+    <string name="str_content_refresh_sysapps_list_activity_sysapps">载入当前系统应用列表</string>
+    <string name="context_item_kill_task_activity_sysapps">杀死此任务</string>
+    <string name="context_item_storage_detail_activity_sysapps">存储信息</string>
+    <string name="context_item_forcestop_disable_activity_sysapps">强制停止 / 卸载</string>
+    <string name="context_item_add_to_exception_list_activity_sysapps">添加到例外列表</string>
+    <string name="txt_hint_activity_sysapps"> 提示: 为了安全起见，某些系统应用无法被杀死。</string>
+
+    <!-- String From ServicesActivity -->
+    <string name="title_activity_services">ServicesActivity</string>
+    <string name="txt_servicesnames_activity_services">服务名</string>
+    <string name="txt_servicesmems_activity_services">内存</string>
+    <string name="btn_refresh_activity_services">刷新</string>
+    <string name="btn_kill_activity_services">杀死</string>
+    <string name="btn_kill_all_activity_services">全部杀死</string>
+    <string name="iv_service_lv_services_activity_services">ImageView of each service</string>
+    <string name="str_services_have_killed_activity_services">已全部杀死</string>
+    <string name="str_service_has_been_denied_activity_services">权限拒绝</string>
+    <string name="str_part_of_service_has_been_denied_activity_services">几乎所有的服务都无法被关闭 (权限拒绝)</string>
+    <string name="str_nothing_has_checked_activity_services">为选中任何项</string>
+    <string name="str_title_refresh_services_list_activity_services">载入中</string>
+    <string name="str_content_refresh_services_list_activity_services">载入当前服务列表</string>
+    <string name="context_item_kill_service_activity_services">杀死此服务</string>
+    <string name="context_item_equivalent_app_storage_detail_activity_services">对应应用的存储信息</string>
+    <string name="context_item_uninstall_equivalent_app_activity_services">卸载想对应的应用</string>
+    <string name="context_item_add_to_exception_list_activity_services">添加到例外列表</string>
+    <string name="txt_hint_activity_services"> 提示: 本页面仅用于展示服务。由于权限限制，几乎所有服务都无法被杀死。</string>
+
+    <!-- String From PerformanceActivity -->
+    <string name="title_activity_performance">PerformanceActivity</string>
+    <string name="txt_cpu_usage_activity_performance">CPU使用量:</string>
+    <string name="txt_mem_usage_activity_performance">内存使用量:</string>
+    <string name="txt_bat_usage_activity_performance">电源信息:</string>
+    <string name="txt_cpu_history_activity_performance">CPU历史:</string>
+    <string name="txt_mem_history_activity_performance">内存历史:</string>
+    <string name="txt_bat_history_activity_performance">电源历史:</string>
+    <string name="btn_bat_history_activity_performance">查看</string>
+    <string name="btn_more_info_activity_performance">更多信息</string>
+    <string name="txt_hint_activity_performance"> 提示: 本页面是用于显示系统性能的动态页面。</string>
+
+    <!-- String From NetworkingActivity -->
+    <string name="title_activity_networking">NetworkingActivity</string>
+    <string name="state_simstate_absent_activity_networking">被拔出</string>
+    <string name="state_simstate_networklocked_activity_networking">网络锁定</string>
+    <string name="state_simstate_pinrequired_activity_networking">需要Pin码</string>
+    <string name="state_simstate_pukrequired_activity_networking">需要Puk码</string>
+    <string name="state_simstate_ready_activity_networking">已准备好</string>
+    <string name="state_simstate_unknown_activity_networking">未知</string>
+    <string name="state_wifistate_disabled_activity_networking">禁用</string>
+    <string name="state_wifistate_disabling_activity_networking">正在禁用</string>
+    <string name="state_wifistate_enabled_activity_networking">启用</string>
+    <string name="state_wifistate_enabling_activity_networking">正在启用</string>
+    <string name="state_wifistate_unknown_activity_networking">未知</string>
+    <string name="state_phonetype_cdma_activity_networking">CDMA</string>
+    <string name="state_phonetype_gsm_activity_networking">GSM</string>
+    <string name="state_phonetype_none_activity_networking">NONE</string>
+    <string name="state_phonetype_sip_activity_networking">SIP</string>
+    <string name="state_networktype_1xrtt_activity_networking">1xRTT</string>
+    <string name="state_networktype_cdma_activity_networking">CDMA: Either IS95A or IS95B</string>
+    <string name="state_networktype_edge_activity_networking">EDGE</string>
+    <string name="state_networktype_ehrpd_activity_networking">eHRPD</string>
+    <string name="state_networktype_evdo0_activity_networking">EVDO revision 0</string>
+    <string name="state_networktype_evdoa_activity_networking">EVDO revision A</string>
+    <string name="state_networktype_evdob_activity_networking">EVDO revision B</string>
+    <string name="state_networktype_gprs_activity_networking">GPRS</string>
+    <string name="state_networktype_hsdpa_activity_networking">HSDPA</string>
+    <string name="state_networktype_hspa_activity_networking">HSPA</string>
+    <string name="state_networktype_hspap_activity_networking">HSPA+</string>
+    <string name="state_networktype_hsupa_activity_networking">HSUPA</string>
+    <string name="state_networktype_iden_activity_networking">iDen</string>
+    <string name="state_networktype_lte_activity_networking">LTE</string>
+    <string name="state_networktype_umts_activity_networking">UMTS(WCDMA)</string>
+    <string name="state_networktype_unknown_activity_networking">未知</string>
+	<string name="txt_mobilephone_info_activity_networking">手机网络信息</string>
+	<string name="txt_mobilephone_settings_activity_networking">设置</string>
+	<string name="txt_currentip_activity_networking">当前IP: </string>
+	<string name="txt_data_usage_activity_networking">应用程序流量监控</string>
+	<string name="txt_wifi_info_activity_networking">WiFi信息</string>
+	<string name="txt_wifi_settings_activity_networking">设置</string>
+
+	<string name="hint_simstate_activity_networking">Sim卡状态:</string>
+	<string name="hint_operator_activity_networking">运营商:</string>
+	<string name="hint_phonenumber_activity_networking">手机号码:</string>
+	<string name="hint_country_activity_networking">国家:</string>
+	<string name="hint_phonetype_activity_networking">手机类型:</string>
+	<string name="hint_networktype_activity_networking">网络类型:</string>
+	<string name="hint_deviceid_activity_networking">设备编号 (IMEI):</string>
+	<string name="hint_subscriberid_activity_networking">签署编号 (IMSI):</string>
+
+	<string name="hint_wifistate_activity_networking">Wifi状态:</string>
+	<string name="hint_macaddress_activity_networking">Mac地址:</string>
+	<string name="hint_ssid_activity_networking">SSID:</string>
+	<string name="hint_bssid_activity_networking">BSSID:</string>
+	<string name="hint_linkspeed_activity_networking">连接速度:</string>
+	<string name="hint_ipaddress_activity_networking">IP地址:</string>
+	<string name="hint_netmask_activity_networking">子网掩码:</string>
+	<string name="hint_gateway_activity_networking">网关:</string>
+	<string name="hint_dns1_activity_networking">DNS1:</string>
+	<string name="hint_dns2_activity_networking">DNS2:</string>
+	<string name="hint_capabilities_activity_networking">性能权限:</string>
+	<string name="hint_frequency_activity_networking">频率:</string>
+
+	<string name="str_no_network_connected_activity_networking">无网络连接</string>
+	<string name="str_can_not_detected_activity_networking">无法检测到</string>
+	<string name="txt_hint_activity_networking">提示: 本页面显示了手机网络和WiFi网络的信息。</string>
+
+    <!-- String From EditExceptionListActivity -->
+    <string name="title_activity_edit_exception_list">编辑例外列表</string>
+    <string name="txt_hint_activity_edit_exception_list">点击选项来将其从例外列表中删除</string>
+    <string name="str_removed_toast_activity_edit_exception_list">选项已删除</string>
+    <string name="txt_baseapp_exception_list_activity_edit_exception_list">应用与系统应用:</string>
+    <string name="txt_service_exception_list_activity_edit_exception_list">服务:</string>
+
+</resources>

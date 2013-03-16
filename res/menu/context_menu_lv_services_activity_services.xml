@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+	    android:id="@+id/context_item_kill_service_activity_services"
+	    android:title="@string/context_item_kill_service_activity_services" />
+
+	<item
+	    android:id="@+id/context_item_equivalent_app_storage_detail_activity_services"
+	    android:title="@string/context_item_equivalent_app_storage_detail_activity_services" />
+
+	<item
+	    android:id="@+id/context_item_uninstall_equivalent_app_activity_services"
+	    android:title="@string/context_item_uninstall_equivalent_app_activity_services" />
+
+	<item
+	    android:id="@+id/context_item_add_to_exception_list_activity_services"
+	    android:title="@string/context_item_add_to_exception_list_activity_services" />
+
+</menu>

@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:layout_margin="2dp"
+    tools:context=".NetworkingActivity" >
+
+    <!--
+    	this TextView is on the top of the apps activity
+    -->
+
+	<TextView
+	    android:id="@+id/txt_hint_activity_networking"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/txt_hint_activity_networking"
+		style="@style/ActivityTopHintTextTheme" />
+
+	<RelativeLayout
+	    android:id="@+id/rl_currentip_activity_networking"
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/txt_hint_activity_networking" >
+
+	    <TextView
+	        android:id="@+id/txt_currentip_activity_networking"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:text="@string/txt_currentip_activity_networking" />
+
+	    <TextView
+		    android:id="@+id/txt_data_usage_activity_networking"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:text="@string/txt_data_usage_activity_networking"
+		    style="@style/ActivityImportantTextTheme" />
+
+    </RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/rl_left_activity_networking"
+		android:layout_below="@id/rl_currentip_activity_networking"
+	    android:layout_width="280dp"
+	    android:layout_height="match_parent" >
+
+		<RelativeLayout
+		    android:id="@+id/rl_mobilephone_info_activity_networking"
+			android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="#FF4F4F4F" >
+	
+			<TextView
+			    android:id="@+id/txt_mobilephone_info_activity_networking"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dp"
+			    android:text="@string/txt_mobilephone_info_activity_networking"
+			    style="@style/ActivityImportantTextTheme" />
+		
+			<TextView
+			    android:id="@+id/txt_mobilephone_settings_activity_networking"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dp"
+			    android:layout_alignParentRight="true"
+			    android:text="@string/txt_mobilephone_settings_activity_networking"
+			    style="@style/ActivityImportantTextTheme" />
+	
+		</RelativeLayout>
+	
+		<ListView
+		    android:id="@+id/lv_mobilephone_info_activity_networking"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_margin="4dp"
+		    android:layout_below="@id/rl_mobilephone_info_activity_networking" />
+
+	</RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/rl_right_activity_networking"
+	    android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/rl_currentip_activity_networking"
+		android:layout_toRightOf="@id/rl_left_activity_networking"
+		android:layout_marginLeft="10dp" >
+
+		<RelativeLayout
+		    android:id="@+id/rl_wifi_info_activity_networking"
+			android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="#FF4F4F4F" >
+	
+			<TextView
+			    android:id="@+id/txt_wifi_info_activity_networking"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dp"
+			    android:text="@string/txt_wifi_info_activity_networking"
+			    style="@style/ActivityImportantTextTheme" />
+		
+			<TextView
+			    android:id="@+id/txt_wifi_settings_activity_networking"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dp"
+			    android:layout_alignParentRight="true"
+			    android:text="@string/txt_wifi_settings_activity_networking"
+			    style="@style/ActivityImportantTextTheme" />
+	
+		</RelativeLayout>
+
+	<ListView
+	    android:id="@+id/lv_wifi_info_activity_networking"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_margin="4dp"
+	    android:layout_below="@id/rl_wifi_info_activity_networking" />
+
+	</RelativeLayout>
+
+</RelativeLayout>

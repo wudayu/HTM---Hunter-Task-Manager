@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="General" >
+
+        <CheckBoxPreference
+	        android:key="displayHtm"
+	        android:title="@string/str_display_htm_itself_activity_preferences"
+	        android:summary="@string/str_summary_display_htm_itself_activity_preferences"
+	        android:defaultValue="false" />
+
+        <Preference
+            android:summary="@string/txt_hint_activity_edit_exception_list"
+            android:title="@string/title_activity_edit_exception_list" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.wudayu.htm.activities.EditExceptionListActivity"
+                android:targetPackage="com.wudayu.htm" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="About" >
+
+        <Preference
+            android:title="@string/author"
+            android:summary="@string/email" />
+
+        <Preference
+            android:title="@string/version_hint"
+            android:summary="@string/version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

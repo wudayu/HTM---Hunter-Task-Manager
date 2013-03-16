@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:layout_margin="2dp"
+    tools:context=".AppsActivity" >
+
+	<!--
+    	this TextView is on the top of the apps activity
+    -->
+
+	<TextView
+	    android:id="@+id/txt_hint_activity_apps"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/txt_hint_activity_apps"
+		style="@style/ActivityTopHintTextTheme" />
+
+    <!--
+    	this RelativeLayout is on the top of the apps activity
+    	it controls the 'all pick', sorting by name, sorting
+    	by mem and sorting by data.
+    -->
+    <RelativeLayout
+        android:id="@+id/relative_layout_top_activity_apps"
+        android:layout_below="@id/txt_hint_activity_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!--
+        	this CheckBox is used to set all the apps'
+        	checkbox into true, or you can say
+        	pick all the apps
+        -->
+		<CheckBox
+		    android:id="@+id/chk_appslist_activity_apps"
+		    android:layout_width="32dp"
+		    android:layout_height="32dp"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:checked="false"
+		    android:button="@null"
+		    android:layout_margin="4dp"
+		    android:background="@drawable/checkbox_selector" />
+
+		<!--
+			this TextView is used to sort the apps
+			by their apps names
+		-->
+		<TextView
+		    android:id="@+id/txt_appsnames_activity_apps"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/txt_appsnames_activity_apps"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/chk_appslist_activity_apps"
+			android:layout_marginLeft="54dp"
+		    style="@style/ActivityImportantTextTheme" />
+
+		<!--
+			this TextView is used to sort the apps
+			by their mem
+		-->
+		<TextView
+		    android:id="@+id/txt_appsmems_activity_apps"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/txt_appsmems_activity_apps"
+		    android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+		    android:layout_marginRight="5dp"
+		    style="@style/ActivityImportantTextTheme" />
+
+    </RelativeLayout>
+
+    <!--
+    	this RelativeLayout is on the bottom of apps activity
+    	it contains three buttons, these buttons used to kill
+    	apps or refresh the list
+	-->
+    <RelativeLayout
+        android:id="@+id/relative_layout_bottom_activity_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <!--
+        	this button used to refresh the list
+		-->
+        <Button
+            android:id="@+id/btn_refresh_activity_apps"
+            style="@style/ActivityNormalButtonTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_refresh_activity_apps"
+            android:layout_alignParentLeft="true" />
+
+        <!--
+        	this button used to kill one or more apps
+		-->
+        <Button
+            android:id="@+id/btn_kill_activity_apps"
+            style="@style/ActivityNormalButtonTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_kill_activity_apps"
+            android:layout_centerHorizontal="true" />
+
+        <!--
+        	this button used to kill all apps directly
+		-->
+        <Button
+            android:id="@+id/btn_kill_all_activity_apps"
+            style="@style/ActivityNormalButtonTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_kill_all_activity_apps"
+            android:layout_alignParentRight="true" />
+        
+    </RelativeLayout>
+
+    <!--
+    	this ListView used to display all the running apps
+    	you can deal with each item by long press them,
+    	after that, a context menu will pop up
+	-->
+    <ListView
+        android:id="@+id/lv_apps_activity_apps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relative_layout_bottom_activity_apps"
+        android:layout_below="@id/relative_layout_top_activity_apps"
+        style="@android:style/Widget.ListView" />
+
+</RelativeLayout>

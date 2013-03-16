@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_preferences"
+        android:showAsAction="never"
+        android:title="@string/menu_preferences" />
+
+    <item
+        android:id="@+id/menu_edit_exception_list"
+        android:showAsAction="never"
+        android:title="@string/menu_edit_exception_list" />
+
+	<item
+	    android:id="@+id/menu_about"
+	    android:showAsAction="never"
+	    android:title="@string/menu_about" />
+
+    <item
+        android:id="@+id/menu_exit"
+        android:showAsAction="never"
+        android:title="@string/menu_exit" />
+
+</menu>

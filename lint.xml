@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak">
+        <ignore path="src/com/wudayu/htm/activities/AppsActivity.java" />
+        <ignore path="src/com/wudayu/htm/activities/PerformanceActivity.java" />
+        <ignore path="src/com/wudayu/htm/activities/ServicesActivity.java" />
+        <ignore path="src/com/wudayu/htm/activities/SysappsActivity.java" />
+    </issue>
+    <issue id="UseSparseArrays">
+        <ignore path="src/com/wudayu/htm/adapters/AppsListAdapter.java" />
+        <ignore path="src/com/wudayu/htm/adapters/ServicesListAdapter.java" />
+        <ignore path="src/com/wudayu/htm/adapters/SysappsListAdapter.java" />
+        <ignore path="src\com\wudayu\htm\adapters\AppsListAdapter.java" />
+        <ignore path="src\com\wudayu\htm\adapters\ServicesListAdapter.java" />
+        <ignore path="src\com\wudayu\htm\adapters\SysappsListAdapter.java" />
+    </issue>
+</lint>

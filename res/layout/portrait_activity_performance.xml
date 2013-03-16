@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:layout_margin="2dp"
+    tools:context=".PerformanceActivity" >
+
+	<!--
+    	this TextView is on the top of the performance activity
+    -->
+
+	<TextView
+	    android:id="@+id/txt_hint_activity_performance"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/txt_hint_activity_performance"
+		style="@style/ActivityTopHintTextTheme" />
+
+    <!--
+    	the block on the top left
+    -->
+	<TextView
+	    android:id="@+id/txt_cpu_usage_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="4dp"
+	    android:layout_below="@id/txt_hint_activity_performance"
+	    android:text="@string/txt_cpu_usage_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<FrameLayout
+	    android:id="@+id/framelayout_cpu_usage_activity_performance"
+	    android:layout_width="120dp"
+	    android:layout_height="80dp"
+	    android:background="@drawable/terminal_performance"
+	    android:layout_alignLeft="@id/txt_cpu_usage_activity_performance"
+	    android:layout_below="@id/txt_cpu_usage_activity_performance" >
+	</FrameLayout>
+
+	<!--
+		the block on the top middle
+	-->
+	<TextView
+	    android:id="@+id/txt_cpu_history_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/framelayout_cpu_usage_activity_performance"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginBottom="4dp"
+	    android:layout_below="@id/txt_hint_activity_performance"
+	    android:text="@string/txt_cpu_history_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<FrameLayout
+	    android:id="@+id/framelayout_cpu_history_activity_performance"
+	    android:layout_width="120dp"
+	    android:layout_height="80dp"
+	    android:background="@drawable/terminal_performance"
+	    android:layout_alignLeft="@id/txt_cpu_history_activity_performance"
+	    android:layout_below="@id/txt_cpu_history_activity_performance" >
+	</FrameLayout>
+
+	<!--
+		the block on the bottom left
+	-->
+	<TextView
+	    android:id="@+id/txt_mem_usage_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="4dp"
+	    android:layout_below="@id/framelayout_cpu_usage_activity_performance"
+	    android:text="@string/txt_mem_usage_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<FrameLayout
+	    android:id="@+id/framelayout_mem_usage_activity_performance"
+	    android:layout_width="120dp"
+	    android:layout_height="80dp"
+	    android:background="@drawable/terminal_performance"
+	    android:layout_alignLeft="@id/txt_mem_usage_activity_performance"
+	    android:layout_below="@id/txt_mem_usage_activity_performance" >
+	</FrameLayout>
+
+	<!--
+		the block on the bottom middle
+	-->
+	<TextView
+	    android:id="@+id/txt_mem_history_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/framelayout_mem_usage_activity_performance"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginBottom="4dp"
+	    android:layout_below="@id/framelayout_cpu_history_activity_performance"
+	    android:text="@string/txt_mem_history_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<FrameLayout
+	    android:id="@+id/framelayout_mem_history_activity_performance"
+	    android:layout_width="120dp"
+	    android:layout_height="80dp"
+	    android:background="@drawable/terminal_performance"
+	    android:layout_alignLeft="@id/txt_mem_history_activity_performance"
+	    android:layout_below="@id/txt_mem_history_activity_performance" >
+	</FrameLayout>
+
+	<!--
+		the block on the top right
+	-->
+	<TextView
+	    android:id="@+id/txt_bat_usage_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/framelayout_cpu_history_activity_performance"
+		android:layout_marginLeft="20dp"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginBottom="4dp"
+	    android:layout_below="@id/txt_hint_activity_performance"
+	    android:text="@string/txt_bat_usage_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<FrameLayout
+	    android:id="@+id/framelayout_bat_usage_activity_performance"
+	    android:layout_width="120dp"
+	    android:layout_height="80dp"
+	    android:background="@drawable/terminal_performance"
+	    android:layout_alignLeft="@id/txt_bat_usage_activity_performance"
+	    android:layout_below="@id/txt_bat_usage_activity_performance" >
+	</FrameLayout>
+
+	<!--
+		the block on the bottom right
+	-->
+	<TextView
+	    android:id="@+id/txt_bat_history_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/framelayout_mem_history_activity_performance"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginBottom="4dp"
+	    android:layout_below="@id/framelayout_bat_usage_activity_performance"
+	    android:text="@string/txt_bat_history_activity_performance"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<Button
+	    android:id="@+id/btn_bat_history_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginTop="5dp"
+	    android:layout_alignLeft="@+id/txt_bat_history_activity_performance"
+	    android:layout_below="@id/txt_bat_history_activity_performance"
+	    android:text="@string/btn_bat_history_activity_performance" />
+
+	<!--
+		the button on the bottom
+	-->
+	<Button
+	    android:id="@+id/btn_more_info_activity_performance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:text="@string/btn_more_info_activity_performance" />
+
+</RelativeLayout>

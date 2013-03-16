@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hunter Task Manager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="author">Author: David Wu / Wu Dayu</string>
+    <string name="email">Contact Me: wudayu@gmail.com</string>
+    <string name="version_hint">Build Version</string>
+    <string name="version">v0.2.15 Beta</string>
+    <string name="str_exit_app_dialog_warning">Warning</string>
+    <string name="str_exit_app_dialog_check">Check</string>
+    <string name="str_exit_app_toast_message">Press again to exit</string>
+    <string name="str_exit_app_dialog_message">Are you sure for leaving?</string>
+    <string name="str_btn_positive">Yes</string>
+    <string name="str_btn_negtive">No</string>
+    <string name="preferences_exception_list_app_sysapp">exception_list_app_sysapp</string>
+    <string name="preferences_exception_list_service">exception_list_service</string>
+
+    <!-- Strings From MainActivity -->
+    <string name="title_activity_main">Hunter Task Manager</string>
+    <string name="str_tab_apps_activity_main">Apps</string>
+    <string name="str_tab_sysapps_activity_main">SysApps</string>
+    <string name="str_tab_services_activity_main">Services</string>
+    <string name="str_tab_performance_activity_main">Performance</string>
+    <string name="str_tab_networking_activity_main">Networking</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_edit_exception_list">Edit Exception List</string>
+    <string name="menu_about">About</string>
+    <string name="menu_exit">Exit</string>
+
+    <!-- Strings From PreferencesActivity -->
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="str_category_general_activity_preferences">GENERAL</string>
+    <string name="str_category_about_activity_preferences">ABOUT</string>
+    <string name="str_display_htm_itself_activity_preferences">Display HTM</string>
+    <string name="str_summary_display_htm_itself_activity_preferences">Display Hunter Task Manager Itself</string>
+
+    <!-- Strings From AppsActivity -->
+    <string name="title_activity_apps">AppsActivity</string>
+    <string name="txt_appsnames_activity_apps">Applications Name</string>
+    <string name="txt_appsmems_activity_apps">Memory</string>
+    <string name="btn_refresh_activity_apps">Refresh</string>
+    <string name="btn_kill_activity_apps">Kill</string>
+    <string name="btn_kill_all_activity_apps">Kill All</string>
+    <string name="iv_app_lv_apps_activity_apps">ImageView of each app</string>
+    <string name="str_apps_have_killed_activity_apps">Killed</string>
+    <string name="str_nothing_has_checked_activity_apps">Nothing Selected</string>
+    <string name="str_title_refresh_apps_list_activity_apps">Loading</string>
+    <string name="str_content_refresh_apps_list_activity_apps">Loading current applications list</string>
+    <string name="context_item_switch_to_app_activity_apps">Switch To App (Open App)</string>
+    <string name="context_item_kill_task_activity_apps">Kill Task</string>
+    <string name="context_item_storage_detail_activity_apps">Storage Detail</string>
+    <string name="context_item_forcestop_uninstall_activity_apps">Force Stop / Uninstall</string>
+    <string name="context_item_add_to_exception_list_activity_apps">Add To Exception List</string>
+    <string name="txt_hint_activity_apps"> Tip: If Kill is useless, you can try ForceStop by long pressing app item</string>
+
+    <!-- Strings From SysappsActivity -->
+    <string name="title_activity_sysapps">SysappsActivity</string>
+    <string name="txt_sysappsnames_activity_sysapps">System Apps Name</string>
+    <string name="txt_sysappsmems_activity_sysapps">Memory</string>
+    <string name="btn_refresh_activity_sysapps">Refresh</string>
+    <string name="btn_kill_activity_sysapps">Kill</string>
+    <string name="btn_kill_all_activity_sysapps">Kill All</string>
+	<string name="iv_sysapp_lv_sysapps_activity_sysapps">ImageView of each system app</string>
+    <string name="str_sysapps_have_killed_activity_sysapps">Killed</string>
+    <string name="str_nothing_has_checked_activity_sysapps">Nothing Selected</string>
+    <string name="str_title_refresh_sysapps_list_activity_sysapps">Loading</string>
+    <string name="str_content_refresh_sysapps_list_activity_sysapps">Loading current system applications list</string>
+    <string name="context_item_kill_task_activity_sysapps">Kill Task</string>
+    <string name="context_item_storage_detail_activity_sysapps">Storage Detail</string>
+    <string name="context_item_forcestop_disable_activity_sysapps">Force Stop / Disable</string>
+    <string name="context_item_add_to_exception_list_activity_sysapps">Add To Exception List</string>
+    <string name="txt_hint_activity_sysapps"> Tip: For security, any system applications can not be killed.</string>
+
+    <!-- String From ServicesActivity -->
+    <string name="title_activity_services">ServicesActivity</string>
+    <string name="txt_servicesnames_activity_services">Service Name</string>
+    <string name="txt_servicesmems_activity_services">Memory</string>
+    <string name="btn_refresh_activity_services">Refresh</string>
+    <string name="btn_kill_activity_services">Kill</string>
+    <string name="btn_kill_all_activity_services">Kill All</string>
+    <string name="iv_service_lv_services_activity_services">ImageView of each service</string>
+    <string name="str_services_have_killed_activity_services">All Killed</string>
+    <string name="str_service_has_been_denied_activity_services">Permission Denied</string>
+    <string name="str_part_of_service_has_been_denied_activity_services">Almost all Services Can Not Be Killed (Permission Denied)</string>
+    <string name="str_nothing_has_checked_activity_services">Nothing Selected</string>
+    <string name="str_title_refresh_services_list_activity_services">Loading</string>
+    <string name="str_content_refresh_services_list_activity_services">Loading current services list</string>
+    <string name="context_item_kill_service_activity_services">Kill Service</string>
+    <string name="context_item_equivalent_app_storage_detail_activity_services">Equivalent Storage Detail</string>
+    <string name="context_item_uninstall_equivalent_app_activity_services">Uninstall Equivalent App</string>
+    <string name="context_item_add_to_exception_list_activity_services">Add To Exception List</string>
+    <string name="txt_hint_activity_services"> Tip: This page is just for displaying services. All services can not be killed because of the permission.</string>
+
+    <!-- String From PerformanceActivity -->
+    <string name="title_activity_performance">PerformanceActivity</string>
+    <string name="txt_cpu_usage_activity_performance">CPU Usage:</string>
+    <string name="txt_mem_usage_activity_performance">Memory Usage:</string>
+    <string name="txt_bat_usage_activity_performance">Battery Info:</string>
+    <string name="txt_cpu_history_activity_performance">CPU History:</string>
+    <string name="txt_mem_history_activity_performance">Memory History:</string>
+    <string name="txt_bat_history_activity_performance">Battery History:</string>
+    <string name="btn_bat_history_activity_performance">Go Check</string>
+    <string name="btn_more_info_activity_performance">More Information</string>
+    <string name="txt_hint_activity_performance"> Tip: This is a dynamic page for showing the system performance.</string>
+
+    <!-- String From NetworkingActivity -->
+    <string name="title_activity_networking">NetworkingActivity</string>
+    <string name="state_simstate_absent_activity_networking">Absent</string>
+    <string name="state_simstate_networklocked_activity_networking">Network Locked</string>
+    <string name="state_simstate_pinrequired_activity_networking">Pin Required</string>
+    <string name="state_simstate_pukrequired_activity_networking">Puk Required</string>
+    <string name="state_simstate_ready_activity_networking">Ready</string>
+    <string name="state_simstate_unknown_activity_networking">Unknown</string>
+    <string name="state_wifistate_disabled_activity_networking">Disabled</string>
+    <string name="state_wifistate_disabling_activity_networking">Disabling</string>
+    <string name="state_wifistate_enabled_activity_networking">Enabled</string>
+    <string name="state_wifistate_enabling_activity_networking">Enabling</string>
+    <string name="state_wifistate_unknown_activity_networking">Unknown</string>
+    <string name="state_phonetype_cdma_activity_networking">CDMA</string>
+    <string name="state_phonetype_gsm_activity_networking">GSM</string>
+    <string name="state_phonetype_none_activity_networking">NONE</string>
+    <string name="state_phonetype_sip_activity_networking">SIP</string>
+    <string name="state_networktype_1xrtt_activity_networking">1xRTT</string>
+    <string name="state_networktype_cdma_activity_networking">CDMA: Either IS95A or IS95B</string>
+    <string name="state_networktype_edge_activity_networking">EDGE</string>
+    <string name="state_networktype_ehrpd_activity_networking">eHRPD</string>
+    <string name="state_networktype_evdo0_activity_networking">EVDO revision 0</string>
+    <string name="state_networktype_evdoa_activity_networking">EVDO revision A</string>
+    <string name="state_networktype_evdob_activity_networking">EVDO revision B</string>
+    <string name="state_networktype_gprs_activity_networking">GPRS</string>
+    <string name="state_networktype_hsdpa_activity_networking">HSDPA</string>
+    <string name="state_networktype_hspa_activity_networking">HSPA</string>
+    <string name="state_networktype_hspap_activity_networking">HSPA+</string>
+    <string name="state_networktype_hsupa_activity_networking">HSUPA</string>
+    <string name="state_networktype_iden_activity_networking">iDen</string>
+    <string name="state_networktype_lte_activity_networking">LTE</string>
+    <string name="state_networktype_umts_activity_networking">UMTS(WCDMA)</string>
+    <string name="state_networktype_unknown_activity_networking">Unknown</string>
+	<string name="txt_mobilephone_info_activity_networking">Mobile Phone Info</string>
+	<string name="txt_mobilephone_settings_activity_networking">Settings</string>
+	<string name="txt_currentip_activity_networking">Current IP: </string>
+	<string name="txt_data_usage_activity_networking">Applications Data Usage</string>
+	<string name="txt_wifi_info_activity_networking">WiFi Info</string>
+	<string name="txt_wifi_settings_activity_networking">Settings</string>
+
+	<string name="hint_simstate_activity_networking">Sim Card State:</string>
+	<string name="hint_operator_activity_networking">Operator:</string>
+	<string name="hint_phonenumber_activity_networking">Phone Number:</string>
+	<string name="hint_country_activity_networking">Country:</string>
+	<string name="hint_phonetype_activity_networking">Phone Type:</string>
+	<string name="hint_networktype_activity_networking">Network Type:</string>
+	<string name="hint_deviceid_activity_networking">Device Id (IMEI):</string>
+	<string name="hint_subscriberid_activity_networking">SubscriberID (IMSI):</string>
+
+	<string name="hint_wifistate_activity_networking">Wifi State:</string>
+	<string name="hint_macaddress_activity_networking">Mac Address:</string>
+	<string name="hint_ssid_activity_networking">SSID:</string>
+	<string name="hint_bssid_activity_networking">BSSID:</string>
+	<string name="hint_linkspeed_activity_networking">Link Speed:</string>
+	<string name="hint_ipaddress_activity_networking">IP Address:</string>
+	<string name="hint_netmask_activity_networking">Netmask:</string>
+	<string name="hint_gateway_activity_networking">Gateway:</string>
+	<string name="hint_dns1_activity_networking">DNS1:</string>
+	<string name="hint_dns2_activity_networking">DNS2:</string>
+	<string name="hint_capabilities_activity_networking">Capabilities:</string>
+	<string name="hint_frequency_activity_networking">Frequency:</string>
+
+	<string name="str_no_network_connected_activity_networking">No Network Connected</string>
+	<string name="str_can_not_detected_activity_networking">Can not detected</string>
+	<string name="txt_hint_activity_networking">Tip: This page display the information of mobile phone and wifi.</string>
+
+    <!-- String From EditExceptionListActivity -->
+    <string name="title_activity_edit_exception_list">Edit Exception List</string>
+    <string name="txt_hint_activity_edit_exception_list">Tap item to remove it from Exception List</string>
+    <string name="str_removed_toast_activity_edit_exception_list">Item Removed</string>
+    <string name="txt_baseapp_exception_list_activity_edit_exception_list">Apps and System Apps:</string>
+    <string name="txt_service_exception_list_activity_edit_exception_list">Services:</string>
+
+</resources>

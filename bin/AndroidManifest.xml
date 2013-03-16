@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wudayu.htm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="com.wudayu.htm.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+		<activity
+            android:name="com.wudayu.htm.activities.PreferencesActivity"
+            android:label="@string/title_activity_preferences"
+            android:parentActivityName="com.wudayu.htm.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.EditExceptionListActivity"
+            android:label="@string/title_activity_edit_exception_list"
+            android:parentActivityName="com.wudayu.htm.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.AppsActivity"
+            android:label="@string/title_activity_apps" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.SysappsActivity"
+            android:label="@string/title_activity_sysapps" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.ServicesActivity"
+            android:label="@string/title_activity_services" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.PerformanceActivity"
+            android:label="@string/title_activity_performance" >
+        </activity>
+        <activity
+            android:name="com.wudayu.htm.activities.NetworkingActivity"
+            android:label="@string/title_activity_networking" >
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for htm"
+        android:targetPackage="com.wudayu.htm" />
+
+</manifest>

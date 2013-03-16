@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    tools:context=".EditExceptionListActivity" >
+
+    <!--
+    	this TextView is on the top of the edit exception list
+    	activity
+    -->
+
+	<TextView
+	    android:id="@+id/txt_hint_activity_edit_exception_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/txt_hint_activity_edit_exception_list"
+	    style="@style/ActivityTopHintTextTheme" />
+
+	<TextView
+	    android:id="@+id/txt_baseapp_exception_list_activity_edit_exception_list"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/txt_hint_activity_edit_exception_list"
+	    android:text="@string/txt_baseapp_exception_list_activity_edit_exception_list"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<RelativeLayout
+	    android:id="@+id/rl_baseapp_exception_list_activity_edit_exception_list"
+	    android:layout_below="@id/txt_baseapp_exception_list_activity_edit_exception_list"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		android:background="@drawable/terminal_listview" >
+
+		<ListView
+	        android:id="@+id/lv_baseapp_exception_list_activity_edit_exception_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp" />
+
+	</RelativeLayout>
+
+	<TextView
+	    android:id="@+id/txt_service_exception_list_activity_edit_exception_list"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/rl_baseapp_exception_list_activity_edit_exception_list"
+	    android:text="@string/txt_service_exception_list_activity_edit_exception_list"
+	    style="@style/ActivityImportantTextTheme" />
+
+	<RelativeLayout
+	    android:id="@+id/rl_service_exception_list_activity_edit_exception_list"
+	    android:layout_below="@id/txt_service_exception_list_activity_edit_exception_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+        android:background="@drawable/terminal_listview" >
+		<ListView
+	        android:id="@+id/lv_service_exception_list_activity_edit_exception_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp" />
+	</RelativeLayout>
+
+</RelativeLayout>

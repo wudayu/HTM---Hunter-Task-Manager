@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+	    android:id="@+id/context_item_switch_to_app_activity_apps"
+	    android:title="@string/context_item_switch_to_app_activity_apps" />
+
+	<item
+	    android:id="@+id/context_item_kill_task_activity_apps"
+	    android:title="@string/context_item_kill_task_activity_apps" />
+
+	<item
+	    android:id="@+id/context_item_storage_detail_activity_apps"
+	    android:title="@string/context_item_storage_detail_activity_apps" />
+
+	<item
+	    android:id="@+id/context_item_forcestop_uninstall_activity_apps"
+	    android:title="@string/context_item_forcestop_uninstall_activity_apps" />
+
+	<item
+	    android:id="@+id/context_item_add_to_exception_list_activity_apps"
+	    android:title="@string/context_item_add_to_exception_list_activity_apps" />
+
+</menu>

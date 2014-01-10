@@ -9,6 +9,8 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.view.View;
 
+import com.wudayu.htm.utils.HtmFormatter;
+
 /**
  * 
  * @author: Wu Dayu
@@ -23,7 +25,6 @@ public class DrawHistoryView extends View {
 
 	public static final int COLOR_LINE = 0xFFBBFFBB;
 	public static final int COLOR_POINT = 0xFFA0A0A0;
-	public static final int POINT_COUNT = 13;
 
 	private static Paint pointPaint;
 	private static Paint linePaint;
@@ -32,13 +33,13 @@ public class DrawHistoryView extends View {
 		pointPaint = new Paint();
 		pointPaint.setColor(COLOR_POINT);
 		pointPaint.setAntiAlias(true);
-		pointPaint.setStrokeWidth(5);
+		pointPaint.setStrokeWidth(8);
 		pointPaint.setStyle(Style.STROKE);
 
 		linePaint = new Paint();
 		linePaint.setColor(COLOR_LINE);
 		linePaint.setAntiAlias(true);
-		linePaint.setStrokeWidth(3);
+		linePaint.setStrokeWidth(6);
 		linePaint.setStyle(Style.STROKE);
 	}
 
@@ -46,6 +47,8 @@ public class DrawHistoryView extends View {
 	int count;
 	Integer previous;
 	boolean hasLine;
+	int width;
+	int height;
 
 	public DrawHistoryView(Context context) {
 		super(context);
@@ -53,26 +56,30 @@ public class DrawHistoryView extends View {
 		queData = null;
 	}
 
-	public DrawHistoryView(Context context, Queue<Integer> queue) {
+	public DrawHistoryView(Context context, Queue<Integer> queue, int width, int height) {
 		super(context);
 
 		this.queData = queue;
+		this.width = width;
+		this.height = height;
 	}
 
 	@Override
 	protected void onDraw(Canvas canvas) {
 		count = 0;
 		hasLine = false;
+		int dividedWidth = width / (HtmFormatter.BASE_POINT_COUNT - 1);
 		Iterator<Integer> iter = queData.iterator();
 		while (iter.hasNext()) {
 			Integer curr = iter.next();
 			if (curr != null) {
-				canvas.drawPoint(count * 20,
-						160 - (float) (160.0 / 100 * curr), pointPaint);
+				canvas.drawCircle(count * dividedWidth, height
+						- (float) (height / 100.0 * curr), 3, pointPaint);
 				if (hasLine) {
-					canvas.drawLine((count - 1) * 20,
-							160 - (float) (160.0 / 100 * previous), count * 20,
-							160 - (float) (160.0 / 100 * curr), linePaint);
+					canvas.drawLine((count - 1) * dividedWidth, height
+							- (float) (previous * height / 100.0), count
+							* dividedWidth, height
+							- (float) (curr * height / 100.0), linePaint);
 				}
 
 				previous = curr;

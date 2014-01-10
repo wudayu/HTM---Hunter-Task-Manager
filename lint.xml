@@ -6,6 +6,9 @@
         <ignore path="src/com/wudayu/htm/activities/ServicesActivity.java" />
         <ignore path="src/com/wudayu/htm/activities/SysappsActivity.java" />
     </issue>
+    <issue id="NestedWeights">
+        <ignore path="res/layout/activity_performance.xml" />
+    </issue>
     <issue id="UseSparseArrays">
         <ignore path="src/com/wudayu/htm/adapters/AppsListAdapter.java" />
         <ignore path="src/com/wudayu/htm/adapters/ServicesListAdapter.java" />

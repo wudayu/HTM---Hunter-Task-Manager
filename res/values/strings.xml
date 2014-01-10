@@ -7,7 +7,7 @@
     <string name="author">Author: David Wu / Wu Dayu</string>
     <string name="email">Contact Me: wudayu@gmail.com</string>
     <string name="version_hint">Build Version</string>
-    <string name="version">v0.2.15 Beta</string>
+    <string name="version">v1.0</string>
     <string name="str_exit_app_dialog_warning">Warning</string>
     <string name="str_exit_app_dialog_check">Check</string>
     <string name="str_exit_app_toast_message">Press again to exit</string>

@@ -30,10 +30,9 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.wudayu.htm.R;
+import com.wudayu.htm.utils.HtmFormatter;
 import com.wudayu.htm.views.DrawHistoryView;
-import com.wudayu.htm.views.DrawNegtiveLineView;
-import com.wudayu.htm.views.DrawPositiveLineView;
-import com.wudayu.htm.views.DrawTextView;
+import com.wudayu.htm.views.DrawUsageView;
 
 /**
  * 
@@ -82,8 +81,6 @@ public class PerformanceActivity extends Activity {
 
 	private Queue<Integer> queCpuHistory;
 	private Queue<Integer> queMemHistory;
-
-	private final int BASE = 10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -196,7 +193,7 @@ public class PerformanceActivity extends Activity {
 		queCpuHistory = new LinkedList<Integer>();
 		queMemHistory = new LinkedList<Integer>();
 
-		for (int i = 0; i < DrawHistoryView.POINT_COUNT; ++i) {
+		for (int i = 0; i < HtmFormatter.BASE_POINT_COUNT; ++i) {
 			queCpuHistory.offer(null);
 			queMemHistory.offer(null);
 		}
@@ -334,7 +331,7 @@ public class PerformanceActivity extends Activity {
 	 * draw the usage frame layout for cpu
 	 */
 	private void drawCpuUsage(double usage) {
-		int humCpu = (int) (usage / BASE + 1 < BASE ? usage / BASE + 1 : BASE);
+		int humCpu = (int) (usage / HtmFormatter.BASE_NUM + 1 < HtmFormatter.BASE_NUM ? usage / HtmFormatter.BASE_NUM + 1 : HtmFormatter.BASE_NUM);
 
 		queCpuHistory.poll();
 		queCpuHistory.offer((int) usage);
@@ -348,7 +345,7 @@ public class PerformanceActivity extends Activity {
 	 */
 	private void drawMemUsage(Long total, Long avail) {
 		long per = (total - avail) * 100 / total;
-		int humMem = (int) (per / BASE + 1 < BASE  ? per / BASE + 1 : BASE);
+		int humMem = (int) (per / HtmFormatter.BASE_NUM + 1 < HtmFormatter.BASE_NUM  ? per / HtmFormatter.BASE_NUM + 1 : HtmFormatter.BASE_NUM);
 
 		queMemHistory.poll();
 		queMemHistory.offer((int) per);
@@ -365,7 +362,7 @@ public class PerformanceActivity extends Activity {
 	 * draw the usage frame layout for battery
 	 */
 	private void drawBatUsage(Integer remain) {
-		int humBat = (int) (remain / BASE + 1 < BASE ? remain / BASE + 1 : BASE);
+		int humBat = (int) (remain / HtmFormatter.BASE_NUM + 1 < HtmFormatter.BASE_NUM ? remain / HtmFormatter.BASE_NUM + 1 : HtmFormatter.BASE_NUM);
 		drawUsage(fmltBatUsage, widthBatUsage, heightBatUsage, humBat, remain + " %");
 	}
 
@@ -381,27 +378,8 @@ public class PerformanceActivity extends Activity {
 	 *            the text which need to
 	 */
 	private void drawUsage(FrameLayout layout, int width, int height, int posCount, String text) {
-		final int fontSize = height / 6;
-		int stackHeight = height * 7 / 10;
-		int numberHeight = height - stackHeight;
-
 		layout.removeAllViews();
-		
-		/*
-		 * draw lines
-		 */
-		for (int i = 0; i < BASE; ++i) {
-			if (i < posCount)
-				layout.addView(new DrawPositiveLineView(this, width * 1 / BASE, stackHeight - stackHeight * i / BASE,
-						width * 9 / BASE, stackHeight - stackHeight * i / BASE));
-			else
-				layout.addView(new DrawNegtiveLineView(this, width * 1 / BASE, stackHeight - stackHeight * i / BASE,
-						width * 9 / BASE, stackHeight - stackHeight * i / BASE));
-		}
-		/*
-		 * draw text
-		 */
-		layout.addView(new DrawTextView(this, width / 2, stackHeight + (numberHeight + fontSize) / 2, text, fontSize));
+		layout.addView(new DrawUsageView(this, posCount, text, width, height));
 	}
 
 	/*
@@ -429,7 +407,7 @@ public class PerformanceActivity extends Activity {
 	 */
 	private void drawHistory(FrameLayout layout, int width, int height, Queue<Integer> queue) {
 		layout.removeAllViews();
-		layout.addView(new DrawHistoryView(this, queue));
+		layout.addView(new DrawHistoryView(this, queue, width, height));
 	}
 
 	/**

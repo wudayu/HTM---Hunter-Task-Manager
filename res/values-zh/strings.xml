@@ -7,7 +7,7 @@
     <string name="author">作者：吴大宇 / David Wu</string>
     <string name="email">联系我: wudayu@gmail.com</string>
     <string name="version_hint">Build Version</string>
-    <string name="version">v0.2.15 Beta</string>
+    <string name="version">v1.0</string>
     <string name="str_exit_app_dialog_warning">注意</string>
     <string name="str_exit_app_dialog_check">确认</string>
     <string name="str_exit_app_toast_message">再按一次退出</string>
@@ -62,7 +62,7 @@
     <string name="btn_refresh_activity_sysapps">刷新</string>
     <string name="btn_kill_activity_sysapps">杀死</string>
     <string name="btn_kill_all_activity_sysapps">全部杀死</string>
-	<string name="iv_sysapp_lv_sysapps_activity_sysapps">ImageView of each system app</string>
+    <string name="iv_sysapp_lv_sysapps_activity_sysapps">ImageView of each system app</string>
     <string name="str_sysapps_have_killed_activity_sysapps">已杀死</string>
     <string name="str_nothing_has_checked_activity_sysapps">未选中任何项</string>
     <string name="str_title_refresh_sysapps_list_activity_sysapps">载入中</string>

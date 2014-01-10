@@ -19,6 +19,10 @@ package com.wudayu.htm.utils;
  */
 public final class HtmFormatter {
 
+	public static final int BASE_NUM = 10;
+
+	public static final int BASE_POINT_COUNT = 13;
+
 	/**
 	 * sizeKbToString is used for in case the size is larger than 1024
 	 * @param size original size in kb

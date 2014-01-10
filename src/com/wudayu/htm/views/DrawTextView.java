@@ -3,6 +3,7 @@ package com.wudayu.htm.views;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.view.View;
 
@@ -27,11 +28,13 @@ public class DrawTextView extends View {
 		paint.setAntiAlias(true);
 		paint.setStrokeWidth(2);
 		paint.setStyle(Style.STROKE);
+		paint.setTextAlign(Align.CENTER);
 		paint.setTextSize(30);
 	}
 
 	int x, y;
 	String text;
+	int fontSize;
 
 	public DrawTextView(Context context) {
 		super(context);
@@ -41,12 +44,14 @@ public class DrawTextView extends View {
 		text = null;
 	}
 
-	public DrawTextView(Context context, int x, int y, String text) {
+	public DrawTextView(Context context, int x, int y, String text, int fontSize) {
 		super(context);
 
 		this.x = x;
 		this.y = y;
 		this.text = text;
+		this.fontSize = fontSize;
+		paint.setTextSize(fontSize);
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public class DrawNegtiveLineView extends View {
 		paint = new Paint();
 		paint.setColor(COLOR_NEGTIVE_LINE);
 		paint.setAntiAlias(true);
-		paint.setStrokeWidth(4);
+		paint.setStrokeWidth(6);
 		paint.setStyle(Style.STROKE);
 	}
 

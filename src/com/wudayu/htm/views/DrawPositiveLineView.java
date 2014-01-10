@@ -26,7 +26,7 @@ public class DrawPositiveLineView extends View {
 		paint = new Paint();
 		paint.setColor(COLOR_POSITIVE_LINE);
 		paint.setAntiAlias(true);
-		paint.setStrokeWidth(5);
+		paint.setStrokeWidth(7);
 		paint.setStyle(Style.STROKE);
 	}
 

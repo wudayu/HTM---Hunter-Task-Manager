@@ -63,6 +63,15 @@ public class PerformanceActivity extends Activity {
 	private FrameLayout fmltMemHistory;
 
 	/*
+	 * the height and width of cpu, memory and battery framelayout
+	 */
+	private int widthCpuUsage, heightCpuUsage;
+	private int widthMemUsage, heightMemUsage;
+	private int widthBatUsage, heightBatUsage;
+	private int widthCpuHistory, heightCpuHistory;
+	private int widthMemHistory, heightMemHistory;
+
+	/*
 	 * the button on the bottom left the battery history button
 	 */
 	private Button btnBatteryHistory;
@@ -73,6 +82,8 @@ public class PerformanceActivity extends Activity {
 
 	private Queue<Integer> queCpuHistory;
 	private Queue<Integer> queMemHistory;
+
+	private final int BASE = 10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -124,8 +135,28 @@ public class PerformanceActivity extends Activity {
 		registerReceiver(batteryReceiver, new IntentFilter(
 				Intent.ACTION_BATTERY_CHANGED));
 
-		new RefreshThread().start();
+		new Handler().post(initialFrameLayoutTask);
 	}
+
+	/*
+	 * use to initialize the FrameLayout's width, height...
+	 */
+	private Runnable initialFrameLayoutTask = new Runnable() { 
+        public void run() {
+        	widthCpuUsage = fmltCpuUsage.getWidth();
+        	heightCpuUsage = fmltCpuUsage.getHeight();
+        	widthMemUsage = fmltMemUsage.getWidth();
+        	heightMemUsage = fmltMemUsage.getHeight();
+        	widthBatUsage = fmltBatUsage.getWidth();
+        	heightBatUsage = fmltBatUsage.getHeight();
+        	widthCpuHistory = fmltCpuHistory.getWidth();
+        	heightCpuHistory = fmltCpuHistory.getHeight();
+        	widthMemHistory = fmltMemHistory.getWidth();
+        	heightMemHistory = fmltMemHistory.getHeight();
+
+    		new RefreshThread().start();
+        }
+    };
 
 	/*
 	 * display the page of the about phone
@@ -303,12 +334,12 @@ public class PerformanceActivity extends Activity {
 	 * draw the usage frame layout for cpu
 	 */
 	private void drawCpuUsage(double usage) {
-		int humCpu = (int) (usage / 10 + 1 < 10 ? usage / 10 + 1 : 10);
+		int humCpu = (int) (usage / BASE + 1 < BASE ? usage / BASE + 1 : BASE);
 
 		queCpuHistory.poll();
 		queCpuHistory.offer((int) usage);
 
-		drawUsage(fmltCpuUsage, humCpu, "           " + Math.round(usage)
+		drawUsage(fmltCpuUsage, widthCpuUsage, heightCpuUsage, humCpu, Math.round(usage)
 				+ " %");
 	}
 
@@ -317,13 +348,13 @@ public class PerformanceActivity extends Activity {
 	 */
 	private void drawMemUsage(Long total, Long avail) {
 		long per = (total - avail) * 100 / total;
-		int humMem = (int) (per / 10 + 1 < 10 ? per / 10 + 1 : 10);
+		int humMem = (int) (per / BASE + 1 < BASE  ? per / BASE + 1 : BASE);
 
 		queMemHistory.poll();
 		queMemHistory.offer((int) per);
 
 		drawUsage(
-				fmltMemUsage,
+				fmltMemUsage, widthMemUsage, heightMemUsage,
 				humMem,
 				Formatter.formatFileSize(getBaseContext(), total - avail)
 						+ " / "
@@ -334,8 +365,8 @@ public class PerformanceActivity extends Activity {
 	 * draw the usage frame layout for battery
 	 */
 	private void drawBatUsage(Integer remain) {
-		int humBat = (int) (remain / 10 + 1 < 10 ? remain / 10 + 1 : 10);
-		drawUsage(fmltBatUsage, humBat, "           " + remain + " %");
+		int humBat = (int) (remain / BASE + 1 < BASE ? remain / BASE + 1 : BASE);
+		drawUsage(fmltBatUsage, widthBatUsage, heightBatUsage, humBat, remain + " %");
 	}
 
 	/**
@@ -349,37 +380,42 @@ public class PerformanceActivity extends Activity {
 	 * @param text
 	 *            the text which need to
 	 */
-	private void drawUsage(FrameLayout layout, int posCount, String text) {
+	private void drawUsage(FrameLayout layout, int width, int height, int posCount, String text) {
+		final int fontSize = height / 6;
+		int stackHeight = height * 7 / 10;
+		int numberHeight = height - stackHeight;
+
 		layout.removeAllViews();
+		
 		/*
 		 * draw lines
 		 */
-		for (int i = 0; i < 10; ++i) {
+		for (int i = 0; i < BASE; ++i) {
 			if (i < posCount)
-				layout.addView(new DrawPositiveLineView(this, 30, 100 - 10 * i,
-						210, 100 - 10 * i));
+				layout.addView(new DrawPositiveLineView(this, width * 1 / BASE, stackHeight - stackHeight * i / BASE,
+						width * 9 / BASE, stackHeight - stackHeight * i / BASE));
 			else
-				layout.addView(new DrawNegtiveLineView(this, 30, 100 - 10 * i,
-						210, 100 - 10 * i));
+				layout.addView(new DrawNegtiveLineView(this, width * 1 / BASE, stackHeight - stackHeight * i / BASE,
+						width * 9 / BASE, stackHeight - stackHeight * i / BASE));
 		}
 		/*
 		 * draw text
 		 */
-		layout.addView(new DrawTextView(this, 12, 140, text));
+		layout.addView(new DrawTextView(this, width / 2, stackHeight + (numberHeight + fontSize) / 2, text, fontSize));
 	}
 
 	/*
 	 * draw the history frame layout for cpu
 	 */
 	private void drawCpuHistory() {
-		drawHistory(fmltCpuHistory, queCpuHistory);
+		drawHistory(fmltCpuHistory, widthCpuHistory, heightCpuHistory, queCpuHistory);
 	}
 
 	/*
 	 * draw the history frame layout for memory
 	 */
 	private void drawMemHistory() {
-		drawHistory(fmltMemHistory, queMemHistory);
+		drawHistory(fmltMemHistory, widthMemHistory, heightMemHistory, queMemHistory);
 	}
 
 	/**
@@ -391,7 +427,7 @@ public class PerformanceActivity extends Activity {
 	 * @param queue
 	 *            the data need for drawing
 	 */
-	private void drawHistory(FrameLayout layout, Queue<Integer> queue) {
+	private void drawHistory(FrameLayout layout, int width, int height, Queue<Integer> queue) {
 		layout.removeAllViews();
 		layout.addView(new DrawHistoryView(this, queue));
 	}

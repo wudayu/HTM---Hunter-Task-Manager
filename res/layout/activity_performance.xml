@@ -140,7 +140,6 @@
 				    android:id="@+id/txt_mem_history_activity_performance"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
-				    android:layout_toRightOf="@id/framelayout_mem_usage_activity_performance"
 				    android:layout_margin="4dp"
 				    android:text="@string/txt_mem_history_activity_performance"
 				    style="@style/ActivityImportantTextTheme" />

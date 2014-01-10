@@ -41,70 +41,91 @@
 
     </RelativeLayout>
 
-	<RelativeLayout
-	    android:id="@+id/rl_mobilephone_info_activity_networking"
-		android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_below="@id/rl_currentip_activity_networking"
-	    android:background="#FF4F4F4F" >
-
-		<TextView
-		    android:id="@+id/txt_mobilephone_info_activity_networking"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="4dp"
-		    android:text="@string/txt_mobilephone_info_activity_networking"
-		    style="@style/ActivityImportantTextTheme" />
-	
-		<TextView
-		    android:id="@+id/txt_mobilephone_settings_activity_networking"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="4dp"
-		    android:layout_alignParentRight="true"
-		    android:text="@string/txt_mobilephone_settings_activity_networking"
-		    style="@style/ActivityImportantTextTheme" />
-
-	</RelativeLayout>
-
-	<ListView
-	    android:id="@+id/lv_mobilephone_info_activity_networking"
-	    android:layout_width="match_parent"
-	    android:layout_height="130dp"
-	    android:layout_margin="4dp"
-	    android:layout_below="@id/rl_mobilephone_info_activity_networking" />
-
-	<RelativeLayout
-	    android:id="@+id/rl_wifi_info_activity_networking"
-		android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_below="@id/lv_mobilephone_info_activity_networking"
-	    android:background="#FF4F4F4F" >
-
-		<TextView
-		    android:id="@+id/txt_wifi_info_activity_networking"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="4dp"
-		    android:text="@string/txt_wifi_info_activity_networking"
-		    style="@style/ActivityImportantTextTheme" />
-	
-		<TextView
-		    android:id="@+id/txt_wifi_settings_activity_networking"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="4dp"
-		    android:layout_alignParentRight="true"
-		    android:text="@string/txt_wifi_settings_activity_networking"
-		    style="@style/ActivityImportantTextTheme" />
-
-	</RelativeLayout>
-
-	<ListView
-	    android:id="@+id/lv_wifi_info_activity_networking"
+	<LinearLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
-	    android:layout_margin="4dp"
-	    android:layout_below="@id/rl_wifi_info_activity_networking" />
+		android:layout_below="@id/rl_currentip_activity_networking"
+		android:orientation="vertical"
+		android:baselineAligned="false" >
+	    <RelativeLayout
+		    android:id="@+id/rl_first_activity_networking"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:layout_marginBottom="1dp" >
+			<RelativeLayout
+			    android:id="@+id/rl_mobilephone_info_activity_networking"
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="#FF4F4F4F" >
+		
+				<TextView
+				    android:id="@+id/txt_mobilephone_info_activity_networking"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_margin="4dp"
+				    android:text="@string/txt_mobilephone_info_activity_networking"
+				    style="@style/ActivityImportantTextTheme" />
+			
+				<TextView
+				    android:id="@+id/txt_mobilephone_settings_activity_networking"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_margin="4dp"
+				    android:layout_alignParentRight="true"
+				    android:text="@string/txt_mobilephone_settings_activity_networking"
+				    style="@style/ActivityImportantTextTheme" />
+		
+			</RelativeLayout>
+		
+			<ListView
+			    android:id="@+id/lv_mobilephone_info_activity_networking"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_marginLeft="4dp"
+			    android:layout_marginRight="4dp"
+			    android:layout_below="@id/rl_mobilephone_info_activity_networking" />
+		</RelativeLayout>
+
+	    <RelativeLayout
+		    android:id="@+id/rl_second_activity_networking"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:layout_marginTop="1dp" >
+			<RelativeLayout
+			    android:id="@+id/rl_wifi_info_activity_networking"
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="#FF4F4F4F" >
+		
+				<TextView
+				    android:id="@+id/txt_wifi_info_activity_networking"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_margin="4dp"
+				    android:text="@string/txt_wifi_info_activity_networking"
+				    style="@style/ActivityImportantTextTheme" />
+			
+				<TextView
+				    android:id="@+id/txt_wifi_settings_activity_networking"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_margin="4dp"
+				    android:layout_alignParentRight="true"
+				    android:text="@string/txt_wifi_settings_activity_networking"
+				    style="@style/ActivityImportantTextTheme" />
+		
+			</RelativeLayout>
+		
+			<ListView
+			    android:id="@+id/lv_wifi_info_activity_networking"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_marginLeft="4dp"
+			    android:layout_marginRight="4dp"
+			    android:layout_below="@id/rl_wifi_info_activity_networking" />
+		</RelativeLayout>
+	</LinearLayout>
 
 </RelativeLayout>

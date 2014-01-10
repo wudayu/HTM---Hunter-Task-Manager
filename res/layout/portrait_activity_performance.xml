@@ -130,6 +130,7 @@
 				    android:layout_height="wrap_content"
 					android:layout_centerHorizontal="true"
 					android:layout_centerVertical="true"
+					android:layout_marginTop="20dp"
 				    android:layout_below="@id/txt_bat_history_activity_performance"
 				    android:text="@string/btn_bat_history_activity_performance" />
 			</RelativeLayout>
@@ -175,6 +176,7 @@
 			<RelativeLayout
 		        android:layout_width="match_parent"
 		        android:layout_height="match_parent"
+		        android:layout_marginRight="4dp"
 		        android:layout_weight="1" >
 				<TextView
 				    android:id="@+id/txt_mem_history_activity_performance"
@@ -219,6 +221,5 @@
 	    android:layout_alignParentBottom="true"
 	    android:layout_alignParentRight="true"
 	    android:text="@string/btn_more_info_activity_performance" />
-
 
 </RelativeLayout>

@@ -10,8 +10,5 @@
         <ignore path="src/com/wudayu/htm/adapters/AppsListAdapter.java" />
         <ignore path="src/com/wudayu/htm/adapters/ServicesListAdapter.java" />
         <ignore path="src/com/wudayu/htm/adapters/SysappsListAdapter.java" />
-        <ignore path="src\com\wudayu\htm\adapters\AppsListAdapter.java" />
-        <ignore path="src\com\wudayu\htm\adapters\ServicesListAdapter.java" />
-        <ignore path="src\com\wudayu\htm\adapters\SysappsListAdapter.java" />
     </issue>
 </lint>
